@@ -103,128 +103,96 @@ header a:hover:before{
     filter: blur(20px);
 }
 
-.block{
+
+
+
+.team{
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #060c212a;
-    z-index: -2;
+    background: #060c21;
 }
-
-.container{
+.players{
+    width: 95%;
     position: relative;
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-template-rows: auto;
-    grid-gap: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-
- .box{
+.coach{
     position: relative;
+    max-width: 250px;
     height: 400px;
     background: #060c21;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #000;
+    border: 3px solid;
+    border-image-source: linear-gradient(45deg, #fff, #e91e63);
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(255,0,94,1);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(255,0,94,1);
+    box-shadow: 0px 0px 10px 2px rgba(255,0,94,1);
+    border-image-slice: 1;
+    padding: 10px;
+    margin: 50px 15px;
+}
+.coach:nth-child(1){
+    background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+.coach:nth-child(2){
+    background: linear-gradient(115deg, #e056fd, #686de0);
+}
+.coach:nth-child(3){
+    background: linear-gradient(215deg, #5d02ff, #2c3e50);
+}
+.coach:nth-child(4){
+    background: linear-gradient(15deg, #22a6b3, #be2edd);
 }
 
- .box:before{
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: #fff;
-    transform: skew(2deg, 2deg);
-    z-index: -1;
-    opacity: 1;
-}
-
- .box:nth-child(1):before{
-    background: linear-gradient(315deg, #ff0057, #e64a19 );
-}
-.container .box:nth-child(2):before{
-    background: linear-gradient(315deg, #89ff00, #00bcd4 );
-}
-.container .box:nth-child(3):before{
-    background: linear-gradient(315deg, #e91e63, #5d02ff );
-}
-.container .box:nth-child(4):before{
-    background: linear-gradient(315deg, #ff0000, #ffc107 );
-}
-
- .box:after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.05);
-    pointer-events: none;
-}
-
-.content{
-    position: relative;
-    padding: 20px;
-    transform: translateY(40px);
-}
-
-.box .content h2{
-    position: absolute;
-    top: -60px;
-    right: 20px;
-    margin: 0;
-    padding: 0;
+.coach .individual h2{
     font-size: 10em;
-    color: rgba(255, 255, 255, .05);
-    transition: 0.5s;
-}
-
-.box:hover .content h2{
-    top: -120px;
-}
-
-.box .content h3{
-    margin: 0 0 10px;
-    padding: 0;
-    font-size: 24px;
-    font-weight: 500;
     color: #fff;
+    position: absolute;
+    transition: 0.5s;
+    top: 30px;
+    color: rgba(255, 255, 255, 0.342);
+    right: 20px;
+}
+.coach:hover .individual h2{
+    top: 0px;
+}
+.coach .individual h3{
+    font-size: 24px;
+    z-index: 2;
+    color: #fff;
+    margin-top: 40px;
 }
 
-.box .content p{
-    margin: 0;
-    padding: 0;
+.coach .individual p{
     color: #fff;
     font-size: 16px;
+    margin-top: 30px;
 }
 
-.box .content a{
+.coach .individual a{
     position: relative;
     margin: 20px 0 0;
     padding: 10px 20px;
     text-decoration: none;
     border: solid 1px #fff;
     display: inline-block;
-    transition: 0.5s;
     transform: translateY(-40px);
     opacity: 0;
+    transition: 0.5s;
     visibility: hidden;
     color: #fff;
 }
 
-.box:hover .content a{
+.coach:hover .individual a{
     transform: translateY(0);
     opacity: 1;
     visibility: visible;
 }
-
-.box .content a:hover{
+.coach .individual a:hover{
     color:  #000;
     background: #fff;
 }
