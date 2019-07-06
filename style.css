@@ -345,3 +345,16 @@ header a:hover:before{
     color:  #000;
     background: #fff;
 }
+
+
+footer {
+    background: #060c21;
+    display: flex;
+}
+footer p{
+    width: 95%;
+    text-align: right;
+    color: #ddd;
+    font-weight: bold;
+    padding: 15px;
+}
